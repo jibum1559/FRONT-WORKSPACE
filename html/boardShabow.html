@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer; /*마우스 대면 손모양으로 됨*/
+        box-shadow: 2px 20px 5px rgba(0,0,0,0.3); /*그림자 추가*/
+        transition: background-color 0.3s, box-shadow 0.3s; /*마우스를 가져갈 시 색상 반짝이는 효과 추가*/
+    }
+        button:hover { /*마우스 호버시 스타일 변경*/
+            background-color: #0056b3;
+            box-shadow: 20px 20px 5px rgba(20,26,239,50%);
+        } 
+       
+    .container{
+        max-width: 800px; /*최대 크기, 이 이상 늘어나지 않겠다는 의미*/
+        margin: 0 auto;
+    }
+    h1{
+        text-align: center;
+    }
+
+
+</style>
+
+
+</head>
+    <body>
+        <div class="container"> <!-- 해당 이름으로 많이 씀 -->
+            <u1><h1>점심 게시판</h1></u1>
+
+            <ul>
+                <!-- 게시물 목록 작성하는 곳 -->
+                <li>
+                    <h2>맥주창고 역삼점</h2>
+                    <p>메뉴 더보기 -> <a href="https://www.instagram.com/lunch_mz/?hl=ko">클릭</a></p>
+                </li>
+                <li>
+                    <h2>명동칼국수 역삼점</h2>
+                    <p>명동칼국수 9000원</p>
+
+                </li>
+            </ul>
+
+            <div>
+                <!-- 메뉴 추가하는 추가란 -->
+                <h2>새 게시물 작성하기</h2>
+                <form>
+                    <input type="text" placeholder="제목"> <br><br>
+                    <textarea placeholder="내용작성하기"></textarea>
+                    <button type="submit">작성완료</button>
+            </div>
+        
+
+
+        </div>
+       
+    </body>
+</html>
