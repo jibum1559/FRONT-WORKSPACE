@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>우리 회사 홈페이지</title>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+          /*background: linear-gradient(/*to right = 오른쪽부터 출발 rgb(11, 7, 61),rgb(141, 223, 255), rgb(210, 210, 233) 180%);*/
+          /*background-color: #600547b0; */
+            padding: 50px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        nav{
+            float: left;
+            width: 30%;
+            height: 700px;
+            background: linear-gradient(rgb(214, 240, 255),rgb(157, 247, 250), rgb(165, 207, 207) 180%);
+            padding: 20px;
+        }
+        nav ul{
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+        article{
+            float: left;
+            padding: 20px;
+            width: 55%;
+            background-color: #f1f1f1;
+            height: 350px;
+        }
+        section::after{
+            content: "";
+            display: table;
+            clear:both
+        }
+        footer{
+            background-image:linear-gradient(45deg, violet, Orange)  /*45deg 45각도*/;
+          /*background-color: #cfff33;*/
+            padding: 10px;
+            text-align: center;
+            color: rgb(182, 129, 129);
+        }
+        @media(max-width:600px){
+            nav,article{
+                width: 100%;
+                height: auto;
+            }
+        }
+        .post-title{
+            color:blue;
+            font-size: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>내 블로그 메인</h2>
+    <p>블로그에 방문해주셔서 감사합니다.</p>
+    <header>
+        
+        <img src="./img/축구 일러스트.jpg" alt="이미지" >   
+        
+    </header>
+    <section>
+        <nav> <!-- nav 검색 -->
+            <ul>
+                <li>축구팀 소개</li><br>                 
+                <li>팀원 소개</li><br>                 
+                <li>회원 모집</li><br>                           
+                <li>경기 일정</li><br>                           
+                <li>경기 영상</li>                           
+
+            </ul>
+        </nav>
+      
+        <article>
+            <div class="post-title">
+            <h>FC.KH</h>
+            </div>
+            <p>팀을 운영하고 모집하며, 매치를 위한 공간입니다.<br>
+            저희 팀은 편하고 재밌게 공을 찰 수 있는 팀입니다. <br>
+            매 경기 촬영을 통해 플레이 감상도 가능합니다. </p>
+        </article>
+
+        <article>
+        <h1>선수 검색</h1>
+        <input type="text" placeholder="선수 이름"> <br><button>검색</button> <br><br> 
+        </article>
+
+    </section> <!-- header - section - article 순서는 꼭 지키는 것 진짜 중요!! -->
+    <footer>
+        <p>블로그소개 | 연혁 | 오시는 길</p>
+    </footer>
+</body>
+
+
+</html>
+
+
+<!-- 댓글쓰기 추가
+
+글 작성하기.  // input 창으로 변경해서 placeholder 사용 //작성완료 버튼 추가-->

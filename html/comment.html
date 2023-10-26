@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+        <body>
+            <h1>댓글쓰기</h1>
+            <div class = "comment">
+                <input id="commentInput" placeholder="댓글 작성하기">
+                <button onclick="addComment()">작성완료</button>
+                <div id="comments"> <!-- 다수의 댓글이니까 comments -->
+                    <!-- 댓글이 표시될 장소 -->
+                </div>
+            </div>
+        </body>
+        <foot></foot>
+        <script>
+            function addComment(){
+                const commentInput = document.getElementById("commentInput");
+                const commentText = commentInput.value;  /*value : 어디서 들어오는 값을 value 가지고 와서 쓴다는 뜻. 가지고 와서 commentText에 담겠다.*/
+
+                if(commentText.trim() === ""){    /*trim() === "" //저 사이가 비어있다면 아래 문구가 뜨게한다.*/
+                    alert("댓글을 작성해주세요.");
+                    return;
+                }
+
+                const commentsBox = document.getElementById("comments");
+
+                const commentDIV = document.createElement("div");
+                commentDIV.className = "comment";
+                commentDIV.textContent = commentText;
+
+                commentsBox.appendChild(commentDIV); /*DIV가 부모라는 가정하에 Child 마지막으로 자식을 넣겠다는 부분*/
+                commnetInput.value="";
+            }
+        </script>
+</html>

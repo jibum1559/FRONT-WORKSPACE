@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>블로그 게시판</title>          
+    </head>
+    <body>
+        <div id="container">
+            <h1>블로그 게시판</h1>
+            <link rel="stylesheet" type="text/css" href="./css/stylees.css">
+            <div id="posts">
+                <!-- 게시물 추가하는 공간 -->
+            </div>
+            <h2>새 게시물 작성</h2>
+            <img src="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg"
+                <label for="title">제목 :</label>
+                <input type="text" id="title" name="title" required> <!-- required : 필수로 넣어줘야할 때 쓴다. -->
+                <label for="content">내용 : </label>
+                <textarea id="content" name="content" required></textarea> <!-- input은 안닫아도 되는데 textarea는 닫아야함 -->
+                <button type="submit">게시하기</button>
+            </form>
+        </div>
+        <script>
+            const postForm = document.getElementById("postForm");
+            const posts = document.getElementById("posts");
+            const postArray = []; //게시물을 저장하는 배열
+
+            postForm.addEventListener("submit",function(event){
+                event.preventDefault();
+                const title = postForm.title.value;
+                const content = postForm.content.value;
+                const date = new Date();
+                const post = {
+                    title,
+                    content,
+                    date,
+                    comments:[],
+                };
+                postArray.push(post); //게시물을 배열에 추가
+
+                //새 게시물을 담아줄 div 생성
+                const postDiv = document.createElement("div");
+                postDiv.classList.add("post");
+                postDiv.innerHTML = `
+                <h3>${title}</h3>
+                <p>${content}</p>
+                <p>게시일 : ${date.toLocaleString()}</p>
+                
+                `;
+                posts.appendChild(postDiv);
+
+            })
+        </script>
+    </body>
+</html>
