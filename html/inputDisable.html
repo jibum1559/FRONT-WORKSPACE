@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+    </head>
+    <body>
+        <form id="loginForm">
+            <title>로그인</title>
+            <label for = "userName">아이디 :</label>
+            <input type="text" id="username" required>
+            <br>
+            <label for = "password">비밀번호</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit" id="loginButton" disabled>로그인</button>
+        </form>
+        <script>
+            //아이디와 비밀번호 입력 가져오기
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+
+            //로그인
+            const loginButton = document.getElementById('loginButton');
+
+            //입력에서 내용이 변경될 때 실행되는 함수
+            function checkInputs(){
+                if(usernameInput.value.trim() !== '' && passwordInput.value.trim() !== ''){
+                    loginButton.removeAttribute('disabled');
+                } else {
+                    loginButton.setAttribute('disabled', true);
+                }
+                
+            }
+
+            usernameInput.addEventListener('input', checkInputs);
+            passwordInput.addEventListener('input', checkInputs);
+        </script>
+    </body>
+</html>

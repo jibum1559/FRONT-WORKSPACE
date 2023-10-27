@@ -2,16 +2,17 @@
 <html>
     <head>
         <title>블로그 게시판</title>          
+        <link rel="stylesheet" type="text/css" href="./css/stylees.css">
     </head>
     <body>
         <div id="container">
             <h1>블로그 게시판</h1>
-            <link rel="stylesheet" type="text/css" href="./css/stylees.css">
+            <img src="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg"><br>
+            
             <div id="posts">
                 <!-- 게시물 추가하는 공간 -->
             </div>
             <h2>새 게시물 작성</h2>
-            <img src="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg"
                 <label for="title">제목 :</label>
                 <input type="text" id="title" name="title" required> <!-- required : 필수로 넣어줘야할 때 쓴다. -->
                 <label for="content">내용 : </label>
@@ -46,7 +47,51 @@
                 <p>게시일 : ${date.toLocaleString()}</p>
                 
                 `;
+                
+                //삭제 버튼 생성
+                const deleteButton = document.createElement("button"); //변수에 할당한다.
+                deleteButton.classList.add("delete-Button"); //delete-Button 이름이 새겨진 버튼이 생성된다.
+                deleteButton.innerHTML = "삭제하기"; //텍스트 내용에 삭제라는 내용을 지정해준다.
+                deleteButton.addEventListener("click",(/*클릭을 했을 때 빈칸을 전달*/) => {   //삭제라는 이벤트에 대해 생성하겠다.
+                    postArray.splice(postArray.indexOf(post),1);
+                    posts.removeChild(postDiv); //posts에서 삭제해야하니까
+                })
+
+                //댓글 폼 생성
+                const commentForm = document.createElement("form");
+                comeentForm.innerHTML = `
+                    <input type = "text" name = "comment" placeholder = "댓글추가하기">
+                    <button type = "submit">게시</button>
+                `;
+                commentForm.addEventListener("submit", function(event){ //이벤트를 전달 받았을 때 들어가겠다.
+                    event.preventDefault();
+                    const commentText = commentForm.comment.value; //comment에 대한 값을 가지고 오겠다는 의미로 value
+                    const comment = {
+                        text : commentText,
+                        date : new Date(),
+                    };
+
+                    post.comments.push(comment); //comment를 올리겠다.
+                    const commentDiv = document.createElement("div"); //댓글 써줄 수 있는 div창 하나 만들어준다.
+                    commentDiv.classList.add("comment");
+                    commentDiv.innerHTML = `
+                        <p>${commentText}</p>
+                        <p>게시일 : ${comment.date.toLocaleString()}</p> 
+                    `;
+                    //댓글 입력 초기화
+                    commentForm.comment.value = ""; //초기화 해주는 값
+                    postDiv.appendChild(commentDiv);
+                });
+
+                postDiv.appendChild(deleteButton);
+                postDiv.appendChild(commentForm);
+
+                //게시물 목록 추가
                 posts.appendChild(postDiv);
+
+                //게시글 입력 초기화
+                postForm.title.value="";
+                postForm.content.value="";
 
             })
         </script>

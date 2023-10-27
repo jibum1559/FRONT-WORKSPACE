@@ -1,8 +1,8 @@
-* {
+*{
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;   /*sans-serif : 삐침 없고 굵기가 일정한 고딕 계열의 글꼴*/
     background-color: #f3f3f3;
 }
 
@@ -31,8 +31,13 @@ h2 {
     background-color: #fff;
 }
 
-form{
-    margin: 20px 0;
+form{ 
+    /*
+    margin: 20px;                상 하 좌 우 모두 20px
+    margin: 20px 0;              상하 20px 좌우 0
+    margin: 10px 20px 30px 40px; 시계방향으로 위(10px), 오른쪽 (20px), 아래(30px), 왼쪽(40px)
+    */
+    margin: 20px 0;  
     padding: 20px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
@@ -58,5 +63,13 @@ button[type="submit"]{
     border: none;
     padding:10px 20px;
     font-size:  18px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #FF5733;
+    color: #fff;
+    border: none;
+    padding: 10px;
     cursor: pointer;
 }
