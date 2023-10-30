@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>블로그 메인</title>
+</head>
+<body>
+  <h1>블로그 메인</h1>
+  <button id="createPostButton">게시글 작성하기</button>
+  <ul id="blogPostList"></ul>
+
+  <script>
+    const blogPostList = document.getElementById("blogPostList");
+    const savedPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+
+    savedPosts.forEach(post => {
+      const listItem = document.createElement("li");
+      listItem.textContent = post.content;
+      blogPostList.appendChild(listItem);
+    });
+
+    // 게시글 작성 페이지로 이동
+    document.getElementById("createPostButton").addEventListener("click", function() {
+      window.location.href = "blog_post.html";
+    });
+  </script>
+</body>
+</html>

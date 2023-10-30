@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>뮤직 카운트</title>
+        <style>
+            audio{
+                display: block;
+                margin: 0 auto;
+                max-width: 80%;
+                border: 5px solid #ffffff;
+                border-radius: 30px;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            }
+            audio::-webkit-media-controls-panel{
+                background-color: #f9fabf;
+                border-radius: 8px;
+            }
+            audio::-webkit-media-controls-play-button{
+                background-color: #e6f9ff;
+                border: 2px solid #291f1f;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>노래재생</h1>
+        <audio id="myAudio" controls autoplay> <!-- autoplay 자동 실행 -->
+            <source src="./mp3/교통_전철역_플랫폼_공간음_소나기_dMS_ST_192.mp3" type="audio/mpeg"> <!-- mpeg 하나의 표준 형식(많이 씀) -->
+        </audio>
+        <script>
+            //자동 재생을 위한 JS코드
+            const audio = document.getElementById('myAudio');
+            audio.play();
+        </script>
+    </body>
+</html>

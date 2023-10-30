@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>블로그 게시글 작성</title>
+</head>
+<body>
+  <h1>게시글 작성</h1>
+  <textarea id="blogPost" placeholder="게시글을 작성하세요"></textarea>
+  <button id="saveButton">게시글 작성하기</button>
+
+  <script>
+    document.getElementById("saveButton").addEventListener("click", function() {
+      const blogPostContent = document.getElementById("blogPost").value;
+
+      if (blogPostContent.trim() !== "") {
+        const timestamp = new Date().getTime();
+        const blogPost = {
+          id: timestamp,
+          content: blogPostContent,
+        };
+
+        const savedPosts = JSON.parse(localStorage.getItem("blogPosts")) || [];
+        savedPosts.push(blogPost);
+        localStorage.setItem("blogPosts", JSON.stringify(savedPosts));
+
+        alert("게시글이 저장되었습니다.");
+
+        // 블로그 메인 페이지로 이동
+        window.location.href = "blog_main.html";
+      } else {
+        alert("게시글 내용을 입력하세요.");
+      }
+    });
+  </script>
+</body>
+</html>
