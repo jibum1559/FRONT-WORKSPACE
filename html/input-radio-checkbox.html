@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>라디오 버튼과 체크박스</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                background-color: #f4f4f4;
+            }
+    
+            h2 {
+                margin-top: 20px;
+            }
+    
+            form {
+                background-color: #fff;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            form label {
+                display: block;
+                margin-bottom: 10px;
+            }
+    
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 5px;
+            }
+    
+            p {
+                font-weight: bold;
+            }
+    
+            input[type="radio"],
+            input[type="checkbox"] {
+                display: none;
+            }
+    
+            label {
+                display: flex;
+                align-items: center;
+            }
+    
+            label::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                border: 2px solid #333;
+                border-radius: 50%;
+                transition: background-color 0.2s, border-color 0.2s;
+            }
+    
+            input[type="radio"] + label::before,
+            input[type="checkbox"] + label::before {
+                content: '';
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                margin-right: 10px;
+                border: 2px solid #333;
+                border-radius: 2px;
+                transition: background-color 0.2s, border-color 0.2s;
+            }
+    
+            input[type="radio"]:checked + label::before,
+            input[type="checkbox"]:checked + label::before {
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>라디오 버튼 예제</h2>
+        <form>
+            <label>
+                <input type="radio" name="gender" value="male" id="maleRadio">
+                남성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female" id="femaleRadio">
+                여성
+            </label>
+            <label>
+                <input type="radio" name="gender" value="other" id="otherRadio">
+                기타
+            </label>
+        </form>
+        
+        <p id="genderResult">선택된 성별 : </p>
+
+        <h2>체크박스 예제</h2>
+        <form>
+            <label>
+                <input type="checkbox" name="fruits" value="apple" id="appleCheckbox">
+                사과
+            </label>
+            <label>
+            <input type="checkbox" name="fruits" value="banana" id="bananaCheckbox"> 
+                바나나
+            </label> 
+            <label>
+            <input type="checkbox" name="fruits" value="orange" id="orangeCheckbox">
+                오렌지
+            </label>
+        </form>
+        <p id="fruitsResult">선택된 과일 :</p>
+        <script>
+            //라디오 버튼 이벤트 처리
+            const genderResult = document.getElementById("genderResult");
+            const maleRadio = document.getElementById("maleRadio");
+
+            maleRadio.addEventListener("change", updateGenderResult);
+            femaleRadio.addEventListener("change", updateGenderResult);
+            otherRadio.addEventListener("change", updateGenderResult);
+            
+            function updateGenderResult(){
+                if(maleRadio.checked){
+                    genderResult.textContent = "선택된 성별 : 남성";
+                } else if(femaleRadio.checked){
+                    genderResult.textContent = "선택된 성별 : 여성";
+                } else if(otherRadio.checked)
+                genderResult.textContent = "선택된 성별 : 기타";
+            }
+        
+            
+            //체크박스 이벤트 처리
+            const fruitsResult = document.getElementById("fruitsResult");
+            const appleCheckbox = document.getElementById("appleCheckbox");
+            const bananaCheckbox = document.getElementById("bananaCheckbox");
+            const orangeCheckbox = document.getElementById("orangeCheckbox");
+
+            appleCheckbox.addEventListener("change", updatefruitsResult);
+            bananaCheckbox.addEventListener("change", updatefruitsResult);
+            orangeCheckbox.addEventListener("change", updatefruitsResult);
+            
+            /* 
+            updateGenderResult = change 이벤트가 발생할 때 실행
+            현재 선택된 체크박스를 확인하고 선택된 과일 항목을 배열에 추가한 다음 결과 메세지를 업데이트
+            */
+
+            function updatefruitsResult(){
+                const selectFruits = []; //과일을 담을 수 있는 빈 배열
+                /*
+                appleCheckbox.checked = checked의 속성을 사용해서 각 체크박스의 선택 여부를 확인하고,
+                선택된 과일 항목을 selectFruits 배열에 추가
+                */
+                if(appleCheckbox.checked){
+                    selectFruits.push("사과");
+                }
+                if(bananaCheckbox.checked){
+                    selectFruits.push("바나나");
+                }
+                if(orangeCheckbox.checked){
+                    selectFruits.push("오렌지");
+                }
+                fruitsResult.textContent = "선택된 과일 : " + selectFruits.join(", ")
+            }
+        </script>
+    </body>
+</html>

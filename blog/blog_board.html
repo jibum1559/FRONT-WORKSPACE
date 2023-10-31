@@ -10,13 +10,14 @@
             <img src="https://image.dongascience.com/Photo/2020/03/5bddba7b6574b95d37b6079c199d7101.jpg"><br>
             
             <div id="posts">
-                <!-- 게시물 추가하는 공간 -->
+                <!-- 게시물 추가하는 공간-->
             </div>
             <h2>새 게시물 작성</h2>
-                <label for="title">제목 :</label>
-                <input type="text" id="title" name="title" required> <!-- required : 필수로 넣어줘야할 때 쓴다. -->
+            <form id="postForm">
+                <label for="title">제목 : </label>
+                <input type="text" id="title" name="title" required>
                 <label for="content">내용 : </label>
-                <textarea id="content" name="content" required></textarea> <!-- input은 안닫아도 되는데 textarea는 닫아야함 -->
+                <textarea id="content" name="content" required></textarea>
                 <button type="submit">게시하기</button>
             </form>
         </div>
@@ -50,16 +51,16 @@
                 
                 //삭제 버튼 생성
                 const deleteButton = document.createElement("button"); //변수에 할당한다.
-                deleteButton.classList.add("delete-Button"); //delete-Button 이름이 새겨진 버튼이 생성된다.
+                deleteButton.classList.add("delete-button"); //delete-button 이름이 새겨진 버튼이 생성된다.
                 deleteButton.innerHTML = "삭제하기"; //텍스트 내용에 삭제라는 내용을 지정해준다.
-                deleteButton.addEventListener("click",(/*클릭을 했을 때 빈칸을 전달*/) => {   //삭제라는 이벤트에 대해 생성하겠다.
+                deleteButton.addEventListener("click",() => {   //*클릭을 했을 때 빈칸을 전달, 삭제라는 이벤트에 대해 생성하겠다.
                     postArray.splice(postArray.indexOf(post),1);
                     posts.removeChild(postDiv); //posts에서 삭제해야하니까
-                })
+                });
 
                 //댓글 폼 생성
                 const commentForm = document.createElement("form");
-                comeentForm.innerHTML = `
+                commentForm.innerHTML = `
                     <input type = "text" name = "comment" placeholder = "댓글추가하기">
                     <button type = "submit">게시</button>
                 `;
@@ -94,6 +95,7 @@
                 postForm.content.value="";
 
             })
+
         </script>
     </body>
 </html>

@@ -37,7 +37,7 @@
   <h1>게시글 작성</h1>
   <textarea id="blogPost" placeholder="게시글을 작성하세요"></textarea>
   <button id="saveButton">게시글 작성하기</button>
-
+</body>
   <script>
     document.getElementById("saveButton").addEventListener("click", function() {
       const blogPostContent = document.getElementById("blogPost").value;
@@ -56,11 +56,11 @@
         alert("게시글이 저장되었습니다.");
 
         // 블로그 메인 페이지로 이동
-        window.location.href = "blog_main.html";
+        window.location.href = "blog-pagination.html";
       } else {
         alert("게시글 내용을 입력하세요.");
       }
     });
   </script>
-</body>
+
 </html>
