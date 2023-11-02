@@ -6,21 +6,36 @@
     <style>
         *{
             box-sizing: border-box;
-            background: linear-gradient(rgb(255, 255, 255),rgba(255, 210, 126, 0.623), rgb(248, 206, 143) 3500px);
+            
         }
         header{
             /*background: linear-gradient(rgb(27, 24, 70),rgb(141, 223, 255), rgb(31, 31, 116) 280%); to right 오른쪽부터 그라데이션 출발*/
             /*background-color: #eb9a9ab0;*/
             background-image: url("./img/메인배경3.jpg");
             background-position: 1px 500px;
-            padding: 150px;
+            padding: 110px;
             text-align: center;
             font-size: 35px;
         }
+        
         nav{
-            height: 300px;
+            width: 200px;
+            height: 100px;
+            margin: 0px;
+        }
+        nav ul{
+            list-style-type: none;
+            text-indent: 50px;
+            padding: 15px;
+            height: 100px;
         }
 
+        section::after{
+            content: "";
+            display: table;
+            clear:both
+        }
+        
         footer{
             text-align:center;
             
@@ -28,30 +43,30 @@
 
     </style>
 </head>
-<body>
+<body style="background: linear-gradient(rgb(255, 255, 255),rgba(255, 210, 126, 0.623), rgb(248, 206, 143) 3500px);">
     <header>
         <p>d</p>   
     </header>
 
-    <section>
-        <nav> <!-- nav 검색 -->
-            <h1>검색</h1>
-        <input type="text" placeholder="내용"> <br><button>검색</button> <br><br> 
-            <ul>
-                <li></li><br>                 
-                <li>팀원 소개</li><br>                 
-                                       
-
+        <nav> 
+        <ul>               
+                <li style="text-indent: 60px;">봄</li><br>                 
+                <li>여 름</li><br>                 
+                <li>가 을</li><br>                 
+                <li>겨 울</li><br>                   
+                <li>맛 집</li><br>                   
+                <li>카 페</li><br><br><br><br>          
+                <input type="text" placeholder="내용"> <br>
+                <button>검색</button>        
             </ul>
         </nav>
-      
+        
         <article>
             <div class="post-title">
-            <h></h>
             </div>
-            <p> </p>
         </article>
-
+    <section>
+        
     </section> <!-- header - section - article 순서는 꼭 지키는 것 진짜 중요!! -->
     <footer>
         <p>블로그소개 | 연혁 | 배너광고문의</p>

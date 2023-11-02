@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>타이머 이용해서 문구 나타내기</title>
+    </head>
+    <body>
+        <div id="msg"></div>
+        <script>
+            //5초 후에 메세지 보이게하는 함수
+            function displayMsg(){
+                var msgDiv = document.getElementById("msg");
+                msgDiv.innerHTML = "안녕하세요.";
+            }
+            
+            //setTimeout : JavaScript 안에 내장되어 있는 함수. 타이머 함수 중 하나
+            //일정 시간이 지나면 지정된 함수를 실행하는 역할을 함
+            /*
+            
+            사용방법:
+            setTimeout(callback, delay);
+            callback : 실행하고자 하는 함수나 코드블록을 지정해서 불러온 후 실행
+            delay : 함수를 실행하기 전까지 기다려야하는 시간을 지정
+            */                
+            setTimeout(displayMsg, 5000);  //해당 기능 사용하여 30분 후에 로그아웃 기능 넣을 수 있음
+            
+            
+        </script>
+    </body>
+</html>

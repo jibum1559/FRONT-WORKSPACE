@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        자바스크립트
+    </head>
+    <body>
+        <script>
+            //var let const
+            /*
+            var : 재할당 재선언 모두 가능, 함수 범위 내에서는 사용하고 접근이 가능
+            let : 재선언 불가, {} 중괄호 속에 작성한 let은 중괄호 안에서만 사용 가능
+            const : 재할당(업데이트), 재선언 둘다 불가, {} 중괄호 속에 작성한 const는 중괄호 안에서만 사용 가능
+            */
+            
+            let hi = "say hi";
+            let num = 5;
+            if(num > 2){
+                let hello = "say Hello";
+                /*
+                console.log() : JavaScript에 기존에 있던 함수로 메세지를 출력하거나 기능이 작동하지 않을 경우에 정보를 확인하고,
+                기록하는데 사용
+                */
+                console.log(hello);
+                console.log("여기가 제대로 작동하는지 확인하는 콘솔로그입니까?");
+            }
+
+            var age = 20;
+            if (age >= 18){
+                console.log("성인 입니다.");
+            } else {
+                console.log("미성년자 입니다.")
+            }
+                console.log(age);
+
+            /*상항연산자 표현식 ? 반환값1 : 반환값2
+                        표현식이 true 일 때 반환값1 이 나옴
+                                false 일 때 반환값2 가 나옴
+            var numbers = 5;
+            (numbers > 0) ? "양수입니다." : "음수이거나 0입니다.";
+            console.log("숫자값 : ", msg)
+            */
+            document.write("<h1>여기서도 안녕?</h1>");
+
+            //배열
+            var arrOne = [1, true, "Hello"];
+            console.log(arrOne);
+            var arrTwo = Array(2, true, "hi");
+            console.log(arrTwo);
+            var arrThree = new Array(); //빈 배열의 객체 생성
+            arrThree[88] = "bye";
+            console.log(arrThree);
+
+            //자바에서는 class로 묶어줬다면 method()
+            //자바스크립트에서는 function()으로 묶어줌
+            //함수란 특별한 목적을 수행할 수 있도록 설계된 독립적인 블록
+            //블록 : 함수나 실행문이 {} 중괄호로 묶여진 부분을 블록이라고 함
+            //자바스크립트 함수에서는 리턴값이 있거나 없을 때 특별하게 리턴이 있다 없다 유무를 설정해주지 않아도 됨
+            function addNumber(x, y){
+                    return x + y;
+            }
+            console.log(addNumber(2, 3));
+
+            //자바스크립트에서 객체 : 데이터와 동작을 하나의 단위로 묶는데 사용되는 자료 구조
+            //객체 속성이 주어짐. 속성은 이름, 값(key,value)으로 주어짐
+            var person = {};
+
+            //객체에 속성을 추가하는 방법은 2가지 존재함
+            //속성 1 : 
+                person.firstName = "K";
+            //person 이라는 객체에 firstName 이름을 붙여줌. firstName 이름에다가 K라는 값을 부여함
+                person.lastName = "H";
+            //person 이라는 객체에 lastName 일음을 붙여주고 H라는 값을 부여함
+                person.age = 30;
+            //person 이라는 객체에 age 라는 이름을 붙여주고 30이라는 값을 부여
+
+                console.log(person);
+                
+            //속성 추가 2 :
+            //객체이름 생성과 동시에 이름과 값 추가
+                var book = {
+                    //book이라는 객체 생성
+                    title : "KH",  //key = title, value = KH
+                    //title 이름과 KH 값 추가
+                    author : "학원",
+                    //AUTHOR 이름과 학원 값 추가
+                }
+                console.log(book.title);
+                
+                // Date 객체 생성
+                var date = new Date();
+                /*
+                    1.new Date("날짜를 나타내는 문자열")
+                    2.new Date(밀리 단위 초)
+                    3.new Date(년, 월, 일, 시, 분, 초, 밀리초). 형식을 각각 쓸 수 있음
+                */
+               //년도를 표기하고자 할 때는 연도 전부 표기
+                var dateOne = new Date(2023, 11, 2, 15, 30, 0);
+                console.log(dateOne);
+
+                //dovument dovument.html 추가 작성되어 있음
+        </script>
+    </body>
+</html>
