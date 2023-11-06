@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>토글을 활용한 제이쿼리 예제</title>
+        <script src="./js/jquery-3.7.1.js"></script>
+        <style>
+            p {
+                display: none;
+                /*display : none은 화면에서 태그나 무언가를 숨길 때 사용*/
+                color: blue;
+            }
+            </style>
+    </head>
+    <body>
+        <button id="toggleButton">토글을 보려면 클릭하세요.</button>
+        <p>toggle 이란? <br>
+            어떤 것을 켜거나 끌 수 있게 해주는 등
+            두 가지 다른 상태로 전환하는 작업을 해줌
+            jQuery toggle()은 숨기거나 보여주는 작업을 나타냄
+        </p>
+        <script>
+            /*
+            1. $(document).ready(function(){      
+            2. $(function(){
+            1번, 2번 코드는 동일한 코드, 간결하게 사용하기 위해 축약
+            $(function(){ : 해당 코드는 $(document).ready(function(){ 코드를 축소하여 작성한 코드
+            */
+
+           
+            $(function(){   /* or $(document).ready(function(){*/
+                $("#toggleButton").on("click",function(){   //id값은 # 붙이기
+                    $("p").toggle();
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery 사용하기</title>
+    </head>
+    <body>
+        <p>마우스로 글씨를 클릭해보세요.</p>
+        
+        <script src="./js/jquery-3.7.1.js">   //인터넷 주소 복사해서 가지고 오는 방법과 파일 가져와서 경로 적는 방법
+        </script>
+        <script>
+            $(function(){
+            //$(선택자).동작함수();    
+                $("p").on("click",function(){  //이벤트를 나타낼 땐 on 쓴다.
+                    $("p").css("color","red");
+                }); 
+            });
+        </script>
+    </body>
+</html>

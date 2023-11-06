@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>요소의 총 갯수 구하기</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"> 
+        </script>
+        <script>
+            $(function(){
+                //버튼 클릭 시 동작할 함수 이벤트 생성
+                $("button").on("click",function(){
+                    $(":checked").next().text("체크확인완료");
+                });
+            });
+            /*
+            $(":checked") : 현재 html 에서 선택된 모든 체크박스를 선택하는 부분
+            next() : 체크된 체크박스 요소(태그 / 여기에서는 input) 다음에 오는 요소(태그 / 여기는 span) 선택
+            text("체크확인완료") : 선택된 요소에 새로운 텍스트를 넣어주는 부분
+            */
+
+            // li 요소 갯수 세는 script // 장바구니에 총 갯수 구할 때 사용할 수 있음
+            $(function(){
+                var items = $("li");
+                //<li> 태그 요소를 모두 선택해서 변수 items에 저장
+                    $("button").on("click",function(){
+                        $("#len").text("li의 총 갯수는 : " + items.length); 
+                    });   
+                });
+
+        </script>
+
+    </head>
+    <body>
+        <h1>li 요소 선택한 후 선택된 갯수 구하기</h1>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        <button>li 갯수를 확인하기</button>
+        <p id="len"></p>
+        <br><br><br><br><br>
+
+
+        <h1>Form li 요소 선택하기</h1>
+        <form>
+            <input type="checkbox" name="inputName" value="one">
+            <span>one</span>
+            <br>
+
+            <input type="checkbox" name="inputName" value="two">
+            <span>two</span>
+            <br>
+
+            <input type="checkbox" name="inputName" value="three" checked>  <!-- 미리 체크가 되어있게 하고 싶으면 뒤에 checked 작성 -->
+            <span>three</span>
+            <br>
+        </form>
+
+        <button>체크 확인 버튼</button>
+    </body>
+</html>

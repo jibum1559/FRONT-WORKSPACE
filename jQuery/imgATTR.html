@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이미지 변경하기</title>
+        <script src="./js/jquery-3.7.1.js"></script>
+        <script>
+            /*
+            attr() : jQuery에서 사용되는 메서드
+                attribute(부여하다, 기여하다 등)
+                1. attr() 사용해서 속성 읽기
+                    var value = $("선택자").attr("속성이름");
+
+                    //이미지 요소 src 속성 값을 가져올 예제코드
+                        var srcValue = $("img").attr("src");
+
+                2. attr() 사용해서 속성값 변경하기
+                    $("선택자").attr("속성이름", "새로운값");
+
+                    //이미지 요소의 src 속성 값을 변경
+                    $("img").sttr("src",새로운이미지.jpg);
+
+                    만약에 요소 전체가 아닌 특정 요소(태그)만 변경하고 싶다면 id나 class, name, alt 등의 값을 이용해서
+                    요소에서 특정값만 변경할 수 있음
+                    
+                    $(선택자[속성값]).attr("src","새로운값");
+                    //이미지 요소의 src 속성 값을 특정 이미지 요소만 변경
+                    <img src="./img/뽀뽀&삐삐.jpg" alt="cute1">
+                    $("img[alt='cute1']").attr("src","./img/에디.jpg");
+                    alt=cute1 값을 이용해서 ale에 cute1이 작성된 이미지만 변경
+            */
+
+            $(function(){
+                $("button").on("click",function(){
+                    $("img[alt='cute1']").attr("src","./img/에디.jpg"); //이미지 하나만 변경할 때
+                    $("img[alt='cute2']").attr("src","./img/패티.jpg")
+                    //$("img").attr("src","./img/에디.jpg");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>이미지 변경하기</button>
+        <img src="./img/뽀뽀&삐삐.jpg" alt="cute1">
+        <img src="./img/루피.jpg" alt="cute2">
+    </body>
+</html>

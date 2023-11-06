@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이벤트 on</title>
+        <script src="./js/jquery-3.7.1.js"></script>
+        <script>
+          
+                /*$("#button").on({ 
+                    선택자를 아이디나 클래스 값이 아닌 태그 값을 넣으면 html 내부에 있는 모든 태그에 속성이
+                    동일하게 적용되기 때문에 되도록이면 id 값이나 class 값을 지정해서 이벤트 핸들러를 사용하는 것이 좋음
+                    그래서 button이 아닌 #mouseBtn 처럼 아이디값을 사용하는 것을 권장함
+                */
+               
+               //mouseenter(= mouse enter) : 마우스가 특정 요소에 진입할 때 실행되는 이벤트를 등록
+               /*
+               .on() : 메서드. 특정 요소에서 하나 이상의 이벤트를 설정할 수 있음 또는 비활성화 할 수 있음
+               .off() : 메서드. 특정 요소에서 하나 이상의 이벤트를 제거할 수 있음 또는 비활성화 할 수 있음
+               
+               ※기본적인 메서드 사용 예제 코드 :
+               $(선택자).메서드명('이벤트명',function(){
+                   이벤트 발생 시 실행할 코드
+            });
+            
+            활용 예제 코드(대표적인) : 
+            $("button").on('click',function(){
+                        alert("버튼이 클릭되었습니다.");
+                    });
+                    
+                    이벤트 핸들러(event handler) : 
+                    -웹페이지 또는 모바일(애플리케이션)에서 발생하는 이벤트(예 : 클릭, 마우스 진입, 키보드 입력, 폼 제출 등)에 
+                    대한 응답을 정의하는 함수
+                    -이벤트가 발생할 때 이벤트 핸들러는 실행되며, 해당 이벤트에 대한 특정 동작을 수행하도록 되어있음
+                    
+                    이벤트 핸들러 종류 : 
+                    - mouseenter, click, mouseleave,mousemove 등이 존재함
+                    */
+                   $(function(){
+                        $("#mouseBtn").on({
+
+                        mouseenter: function(){  //마우스가 들어왔을 때 뭔가를 하겠다
+                        $("#text").append("마우스가 영역을 침범했대!!<br>");
+                    },
+                        click: function(){
+                        $("#text").append("마우스가 버튼을 클릭했어요!<br>");
+                    },
+                        mouseleave: function(){
+                        $("#text").append("마우스가 버튼 위에서 사라졌습니다.!!<br>")
+                    }
+                });
+            });
+            //2. toggle을 활용한 hide show
+            $(function(){
+                $("#toggleBtn").on("click",function(){
+                    $("#toggleText").toggle("slow");
+                });
+            });
+
+
+        </script>
+    </head>
+    <body>
+        <h1>1. on 메소드</h1>
+        <button id="mouseBtn">마우스를 올려보세요.</button>
+        <p id="text"></p>
+
+        <h1>2. on 메소드 - click</h1>
+        <button id="toggleBtn">버튼 클릭 시 보이고 숨기는 기능</button>
+        <p id="toggleText">이 글을 보이고 숨기게 하겠습니다.</p>
+    </body>
+</html>

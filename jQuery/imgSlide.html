@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>이미지 슬라이드</title>
+        <script src="./js/jquery-3.7.1.js"></script>
+        <style>
+            #imageSlider{
+                width: 300px;
+                height: 300px;
+                /*
+                overFlow: hidden; 특정 너비와 높이를 벗어나면 초과한 부분을 숨김
+                position: relative; 상대적인 위치 설정
+                */
+                overflow: hidden;
+                position: relative;
+            }
+            img{
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                /*
+                position: absolute; 절대적인 위치 설정
+                */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="imageSlider">
+            <img src="./img/루피.jpg">
+            <img src="./img/뽀로로.jpg">
+            <img src="./img/뽀뽀&삐삐.jpg">
+            <img src="./img/에디.jpg">
+            <img src="./img/패티.jpg">
+        </div>
+        <script>
+            $(function(){
+                let currentNumber = 0;
+                let images = $("img");
+                images.hide(); 
+                //hide() : 숨김처리 할 때 사용하는 메서드
+                //eq() : 어떤 특정 값의 요소를 보이게 함
+                //eq(currentNumber) : currentNumber 값의 요소를 보이게 함
+                //show() : 보임처리 할 때 사용하는 메서드
+                images.eq(currentNumber).show(); //첫 번째 이미지 보이기
+
+                //다음 이미지 보여주는 함수 생성
+                function nextImage(){
+                    images.eq(currentNumber).fadeOut(1000);
+                    //fadeOut : 서서히 사라지는 효과를 주는 메서드
+                    //fadeOut(숫자값) : 1000 = 1초 동안 서서히 투명하게 만들어줌
+                    currentNumber = (currentNumber + 1) % images.length;
+                    //다음 숫자로 넘어가는 변수 생성과 동시에 만약에 이미지 수가 5개 일 경우
+                    //[0,1,2,3,4] 4번 이미지에 도달했을 때 0번 이미지로 돌아가게 함
+                    images.eq(currentNumber).fadeIn(1000);
+                    //fadeIn : 서서히 밝아지며 나타나는 효과를 주는 메서드
+                    //fadeIn(숫자값) : 1000 = 1초 동안 서서히 나타나게 만들어줌
+
+                    //setInterval : JavaScript 안에서 사용되는 타이머 함수
+                    // - 일정한 시간 간격을 두고 반복적으로 함수를 실행할 때 사용
+                }
+                setInterval(nextImage, 2000);
+            });
+        </script>
+    </body>
+</html>
