@@ -4,6 +4,8 @@
         <title>마이페이지 메인화면</title>
         <meta charset="UTF-8">
         <style>
+            *{box-sizing: border-box;}
+
             header {
             padding: 80px;
             background: linear-gradient(to right, #6190E8, #A7BFE8);       
@@ -37,16 +39,33 @@
                 left: 1700px;
             }
             .mypage {
-                font-size: 30px;
+                position: relative;
+                left: -100px;
+                font-size: 40px;
+                width: 100%;
+                
             }
 
             .mypage img {
-                width: 50px;
+                position: relative;
+                left: 10px;
+                width: 60px;
+                height: auto;
+                
+                
 
             }
+            .main {
+                background-color: antiquewhite;
+                float: left;
+                padding: 200px;
+                width: 85%;
+                height: 900px;
+            }
 
-            aside ul {
+            nav ul {
                 list-style-type: none;
+                text-align: right;
                 position: relative;
                 bottom: -100px;
                 display: flex;
@@ -54,6 +73,13 @@
                 gap: 35px;
             }
             
+            nav {
+                background-color: aqua;
+                float: left;
+                padding: 30px;
+                width: 15%;
+                height: 900px;
+            }
         
 
         </style>
@@ -65,18 +91,26 @@
                 <article><img src="./img/유저.png" class="user"></article>
                 <article><img src="./img/찜.png" class="like"></article> 
         </header>
-            <aside>
-                <ul>
-                    <li class="mypage"><img src="./img/home2.png" alt="마이페이지 아이콘">
+        <section>
+            <nav>
+                <ul >
+                    <li class="mypage" ><img src="./img/home2.png" alt="마이페이지 아이콘">
                         마이페이지</li>
                     <li>내정보</li>
                     <li>찜한 매물</li>
                     <li>내 문의내역</li>
                     <li>중개인 등록</li>
                     <li>회원탈퇴</li>
+                    <hr style="height: 80%;">
                 </ul>
-            </aside>
-            <section>
+            </nav>
+            <article class="main">
+                <h1>최근 본 매물</h1><br>
+                <hr style="width: 85%;">
+
+            </article>
+
+        
                 
             </section>
 
