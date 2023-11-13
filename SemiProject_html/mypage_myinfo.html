@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>마이페이지 메인화면</title> <!-- mypage_main.html -->
+        <meta charset="UTF-8">
+        <style>
+            *{box-sizing: border-box;}
+
+            header {
+            height: 190px;
+            background: linear-gradient(to right, #6190E8, #A7BFE8);       
+            }
+
+            /*상단부 로고, 로그인/로그아웃, 마이페이지, 찜 부분*/
+            .use_list p {
+                position: relative;
+                top: 20px;
+                left: 30px;
+            }
+
+            .use {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .use li {
+                position: relative;
+                top: -90px;
+                left: 1560px;
+                margin-right: 28px;
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .use p {
+                position: relative;
+                left: 10px;
+                top: 10px;
+                font-size: 10px;
+                margin-right: 10px;
+            }
+
+            .logo {
+                width: 150px;
+                height: auto; 
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            .logout{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+            .user{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+            .like{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+
+            /*좌측 마이페이지 카테고리 부분*/
+            .mypage {
+                position: relative;
+                left: -98px;
+                font-size: 33px;
+                width: 137%;
+                
+            }
+
+            .mypage img {
+                position: relative;
+                left: 5px;
+                top: 4px;
+                width: 46px;
+                height: auto;
+                
+            }
+            .main {
+               /* background-color: antiquewhite; */
+                float: left;
+                width: 85%;
+                height: 900px;
+            }
+
+            .myinfo {
+                position: relative;
+                left: 53px;
+                top: 42px;
+                font-size: 25px;
+            }
+
+            .left_category ul {
+                list-style-type: none;
+                text-align: right;
+                font-size: 21px;
+                font-weight: bold;
+                left: -25px;
+                position: relative;
+                bottom: -30px;
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+            
+            .left_category {
+               /* background-color: aqua;*/
+                float: left;
+                width: 15%;
+                height: 900px;
+            }
+        
+            .left_category hr {
+                height: 96%;
+                width: 0px;
+                position: relative;
+                top: -378px;
+                left: 142px;
+            }
+            
+            .info_box {
+                border: 3px solid #b1adad;
+                border-radius: 10px;
+                box-shadow: 100px 100px 100px rgb(red, green, blue);
+                width: 1000px;
+                height: 700px;
+                position: relative;
+                left: 210px;
+            }
+
+            .realestate_list {
+                text-align: center;
+                margin-top: 30%;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="use_list_box">
+                <div class="use_list">
+                    <p>
+                        <a href="메인페이지로 이동" class="use_main" onclik>
+                            <span><img src="./img/로고.png" class="logo"></span>
+                        </a>
+                    </p>
+                    <ul class="use">
+                        <li>
+                            <a href="메인페이지로 이동" class="use_logout" title="로그아웃" onclik>
+                                <span><img src="./img/logout.png" class="logout"><br>LOGOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="마이페이지로 이동" class="use_mypage" title="마이페이지" onclik>
+                                <span><img src="./img/유저.png" class="user"><br>MY</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="찜 매물 조회로 이동" class="use_likelist" title="찜매물" onclik>
+                                <span><img src="./img/찜.png" class="like"><br>찜</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </header>
+        <section>
+            <nav class="left_category">
+                <ul>
+                    <li class="mypage" ><img src="./img/마이페이지_아이콘.png" alt="마이페이지 아이콘">
+                        마이페이지</li>
+                    <li style="color: #A7BFE8;"><a href="아이디 비밀번호 확인.jsp">내정보</a></li>
+                    <li>찜한 매물</li>
+                    <li>내 문의내역</li>
+                    <li>중개인 등록</li>
+                    <li>회원탈퇴</li>
+                </ul>
+                <hr>
+            </nav>
+            <article class="main">
+                <h1 class="myinfo">내 정보</h1><br>
+                <hr style="width: 96%;">
+                
+                <div class="info_box">
+
+                    <div class="realestate_box">
+                        <div class="realestate_list">
+                            <label for="userid">아이디 :</label>
+                            <input type="text" id="userid" name="userid" required><br>
+                            <label for="password">비밀번호 :</label>
+                            <input type="password" id="password" name="password" required><br><br>
+                            <button type="submit" id="usercheck">확인</button>                                
+                               
+                        </div>
+                    </div>
+                </div>
+            </article>
+    </body>
+</html>

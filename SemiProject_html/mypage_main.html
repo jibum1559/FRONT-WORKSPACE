@@ -1,118 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>마이페이지 메인화면</title>
+        <link rel="stylesheet" type="text/css" href="./css/mypage_main_style.css">
+        <title>마이페이지 메인화면</title> <!-- mypage_main.html -->
         <meta charset="UTF-8">
-        <style>
-            *{box-sizing: border-box;}
-
-            header {
-            padding: 80px;
-            background: linear-gradient(to right, #6190E8, #A7BFE8);       
-            }
-
-            .logo {
-                width: 150px;
-                height: auto; 
-                margin-top: -68px;
-                margin-left: -59px;
-            }
-            .logout{
-                width: 50px;
-                height: auto;
-                position: relative;
-                top: -96px;
-                left: 1567px;
-            }
-            .user{
-                width: 50px;
-                height: auto;
-                position: relative;
-                top: -153px;
-                left: 1633px;
-            }
-            .like{
-                width: 50px;
-                height: auto;
-                position: relative;
-                top: -203px;
-                left: 1700px;
-            }
-            .mypage {
-                position: relative;
-                left: -100px;
-                font-size: 40px;
-                width: 100%;
-                
-            }
-
-            .mypage img {
-                position: relative;
-                left: 10px;
-                width: 60px;
-                height: auto;
-                
-                
-
-            }
-            .main {
-                background-color: antiquewhite;
-                float: left;
-                padding: 200px;
-                width: 85%;
-                height: 900px;
-            }
-
-            nav ul {
-                list-style-type: none;
-                text-align: right;
-                position: relative;
-                bottom: -100px;
-                display: flex;
-                flex-direction: column;
-                gap: 35px;
-            }
-            
-            nav {
-                background-color: aqua;
-                float: left;
-                padding: 30px;
-                width: 15%;
-                height: 900px;
-            }
-        
-
-        </style>
     </head>
     <body>
         <header>
-                <article><img src="./img/드루와방_로고3.png" class="logo"></article>
-                <article><img src="./img/로그아웃.png" class="logout"></article>
-                <article><img src="./img/유저.png" class="user"></article>
-                <article><img src="./img/찜.png" class="like"></article> 
+            <div class="use_list_box">
+                <div class="use_list">
+                    <p>
+                        <a href="메인페이지로 이동" class="use_main" onclik>
+                            <span><img src="./img/로고.png" class="logo"></span>
+                        </a>
+                    </p>
+                    <ul class="use">
+                        <li>
+                            <a href="메인페이지로 이동" class="use_logout" title="로그아웃" onclik>
+                                <span><img src="./img/logout.png" class="logout"><br>LOGOUT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="마이페이지로 이동" class="use_mypage" title="마이페이지" onclik>
+                                <span><img src="./img/유저.png" class="user"><br>MY</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="찜 매물 조회로 이동" class="use_likelist" title="찜매물" onclik>
+                                <span><img src="./img/찜.png" class="like"><br>찜</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
         </header>
         <section>
-            <nav>
-                <ul >
-                    <li class="mypage" ><img src="./img/home2.png" alt="마이페이지 아이콘">
+            <nav class="left_category">
+                <ul>
+                    <li class="mypage" ><img src="./img/마이페이지_아이콘.png" alt="마이페이지 아이콘">
                         마이페이지</li>
                     <li>내정보</li>
                     <li>찜한 매물</li>
                     <li>내 문의내역</li>
                     <li>중개인 등록</li>
                     <li>회원탈퇴</li>
-                    <hr style="height: 80%;">
                 </ul>
+                <hr>
             </nav>
             <article class="main">
-                <h1>최근 본 매물</h1><br>
-                <hr style="width: 85%;">
-
-            </article>
-
-        
+                <h1 class="recent">최근 본 매물</h1><br>
+                <hr style="width: 96%;">
                 
-            </section>
-
+                <div class="realestate_area">
+                    <div class="realestate_box">
+                        <div class="realestate_list">
+                            <ul class="realestate">
+                                <li>
+                                <a href="매물 상세정보로 전환">
+                                최근 본 매물 정보
+                                </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </article>
     </body>
 </html>

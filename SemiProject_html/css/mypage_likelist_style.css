@@ -1,0 +1,162 @@
+*{box-sizing: border-box;}
+
+            header {
+            height: 190px;
+            background: linear-gradient(to right, #6190E8, #A7BFE8);       
+            }
+
+            .use_list p {
+                position: relative;
+                top: 20px;
+                left: 30px;
+            }
+
+            .use {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .use li {
+                position: relative;
+                top: -90px;
+                left: 1560px;
+                margin-right: 28px;
+                text-align: center;
+                font-size: 13px;
+            }
+
+            .use p {
+                position: relative;
+                left: 10px;
+                top: 10px;
+                font-size: 10px;
+                margin-right: 10px;
+            }
+
+            .logo {
+                width: 150px;
+                height: auto; 
+                margin-top: 0px;
+                margin-left: 0px;
+            }
+            .logout{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+            .user{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+            .like{
+                width: 42px;
+                height: auto;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+            .mypage {
+                position: relative;
+                left: -98px;
+                font-size: 33px;
+                width: 137%;
+                
+            }
+
+            .mypage img {
+                position: relative;
+                left: 5px;
+                top: 4px;
+                width: 46px;
+                height: auto;
+                
+                
+
+            }
+            .main {
+               /* background-color: antiquewhite; */
+                float: left;
+                width: 85%;
+                height: 900px;
+            }
+
+            .LikeList {
+                position: relative;
+                left: 53px;
+                top: 42px;
+                font-size: 25px;
+            }
+
+            .type_box {
+                position: relative;
+                left: 38px;
+                font-size: 15px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .type_box hr {
+                position: relative;
+                left: -38px;
+            }
+
+            .type {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .type li {
+                margin-right: 50px;
+            }
+
+            .realestate {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                position: relative;
+                top: 100px;
+            }
+
+            .realestate li {
+                position: relative;
+                left: 100px;
+                margin-right: 300px;
+
+            }
+
+            .left_category ul {
+                list-style-type: none;
+                text-align: right;
+                font-size: 21px;
+                font-weight: bold;
+                left: -25px;
+                position: relative;
+                bottom: -30px;
+                display: flex;
+                flex-direction: column;
+                gap: 35px;
+            }
+            
+            .left_category {
+               /* background-color: aqua;*/
+                float: left;
+                width: 15%;
+                height: 900px;
+            }
+        
+            .left_category hr {
+                height: 96%;
+                width: 0px;
+                position: relative;
+                top: -378px;
+                left: 142px;
+
+
+            }
