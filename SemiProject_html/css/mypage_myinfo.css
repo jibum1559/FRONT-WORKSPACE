@@ -21,7 +21,7 @@
 
             .use li {
                 position: relative;
-                top: -90px;
+                bottom: 90px;
                 left: 1560px;
                 margin-right: 28px;
                 text-align: center;
@@ -67,7 +67,7 @@
             /*좌측 마이페이지 카테고리 부분*/
             .mypage {
                 position: relative;
-                left: -98px;
+                right: 98px;
                 font-size: 33px;
                 width: 137%;
                 
@@ -95,6 +95,7 @@
                 font-size: 25px;
             }
 
+            /*내 정보 우측 주석*/
             .annotation {
                 position: relative;
                 left: 150px;
@@ -104,14 +105,15 @@
                 
             }
 
+            /*좌측 카테고리*/
             .left_category ul {
                 list-style-type: none;
                 text-align: right;
                 font-size: 21px;
                 font-weight: bold;
-                left: -25px;
+                right: 25px;
                 position: relative;
-                bottom: -30px;
+                top: 30px;
                 display: flex;
                 flex-direction: column;
                 gap: 35px;
@@ -129,7 +131,7 @@
                 height: 96%;
                 width: 0px;
                 position: relative;
-                top: -378px;
+                bottom: 378px;
                 left: 142px;
             }
             
@@ -141,12 +143,23 @@
                 width: 1000px;
                 height: 700px;
                 position: relative;
-                left: 210px;
+                left: 180px;
+                top: 40px;
+            }
+
+            .info_box img {
+                width: 10%;
+                height: auto;
+                position: relative;
+                left: 45%;
+                top: 15%;
             }
 
             .user_info {
                 text-align: center;
-                margin-top: 30%;
+                position: relative;
+                right: 3%;
+                margin-top: 13%;
             }
             
             /*아이디, 비밀번호 라벨 정렬*/
@@ -156,7 +169,8 @@
                 text-align: right;
                 color: #1b1b1b;
                 display: inline-block;
-                width: 65px;
+                width: 93px;
+                height: 40px;
             }
 
             /*입력칸 스타일 조정*/
@@ -176,14 +190,16 @@
             
             /*확인 버튼 스타일 조정*/
             .user_check button {
-                width: 110px;
-                height: 38px;
+                width: 59px;
+                height: 22px;
                 border-radius: 3px;
                 border-width: 1px;
-                background-color:rgb(0, 5, 14); 
+                background-color:rgb(124, 124, 124); 
                 color: #ffffff;
-                font-size: 17px;
-                font-weight: 700;
+                font-size: 11px;
+                font-weight: 600;
+                position: relative;
+                left: 108px;
             }
 
             /*a태그 밑줄 밑 색상 제거*/
