@@ -1,6 +1,7 @@
 @charset "EUC-KR";
           *{box-sizing: border-box;}
 
+            
             header {
             height: 190px;
             background: linear-gradient(to right, #6190E8, #A7BFE8);       
@@ -149,6 +150,11 @@
                 left: 142px;
             }
 
+            .realestate_box {
+                position: relative;
+                left: 100px;
+            }
+
             .norealestate_list img {
                 position: relative;
                 top: 100px;
@@ -158,12 +164,13 @@
             }
 
             .norealestate_list p {
-                font-size: 17px;
+                font-size: 25px;
                 font-weight: bold;
                 color: #516786;
                 position: relative;
                 top: 140px;
-                left: 412px;
+                left: 375px;
+            }
 
             /*a태그 색상 및 밑줄 없앰*/
             a {

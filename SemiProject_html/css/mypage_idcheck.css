@@ -1,6 +1,6 @@
 @charset "EUC-KR";
             *{box-sizing: border-box;}
-
+            
             header {
             height: 190px;
             background: linear-gradient(to right, #6190E8, #A7BFE8);       

@@ -1,0 +1,471 @@
+*{
+    box-sizing: border-box;
+    }
+       /*메인페이지*/
+                * {
+                    padding: 0px;
+                    margin: 0px;
+
+                }
+
+               header {
+               position: relative;
+
+               height: 300px;
+               background: linear-gradient(to right, rgba(97, 144, 232, 0.5), rgba(167, 191, 232, 1.0));
+                
+               }
+       
+               .use_list p {
+                   position: relative;
+                   top: 20px;
+                   left: 30px;
+               }
+   
+               .use {
+                   list-style-type: none;
+                   display: flex;
+                   flex-direction: row;
+               }
+   
+               .use li {
+                   position: relative;
+                   bottom: 90px;
+                   left: 1560px;
+                   margin-right: 28px;
+                   text-align: center;
+                   font-size: 13px;
+               }
+   
+               .use p {
+                   position: relative;
+                   left: 10px;
+                   top: 10px;
+                   font-size: 10px;
+                   margin-right: 10px;
+               }
+   
+               .logo {
+                   width: 150px;
+                   height: auto; 
+                   margin-top: 0px;
+                   margin-left: 0px;
+               }
+               .logout{
+                   width: 42px;
+                   height: auto;
+                   position: relative;
+                   top: 0px;
+                   left: 0px;
+               }
+               .user{
+                   width: 42px;
+                   height: auto;
+                   position: relative;
+                   top: 0px;
+                   left: 0px;
+               }
+               .like{
+                   width: 42px;
+                   height: auto;
+                   position: relative;
+                   top: 0px;
+                   left: 0px;
+               }
+               .mypage {
+                   position: relative;
+                   right: 98px;
+                   font-size: 33px;
+                   width: 137%;
+                   
+               }
+   
+               .mypage img {
+                   position: relative;
+                   left: 5px;
+                   top: 4px;
+                   width: 46px;
+                   height: auto;
+   
+               }
+               
+               
+               footer {
+                   text-align:center;
+                   float:bottom;
+               }
+               
+               .img-container {
+                   align-items:center;
+                   display:flex;
+                   margin-left:300px;
+               
+               }
+               
+               .img-container img {
+                      margin-right:50px;
+               
+               }
+               
+               .image {
+                   width:300px;
+                   height:300px;
+                   margin: 10px;
+               }
+               
+               #prevPage {
+                   position: relative;
+                   padding: 10px 20px;
+                   color: black;
+                   background-color:white;
+                   border: none;
+                   cursor: pointer;
+                   
+               
+               }
+               
+               #nextPage {
+                   margin:100px;
+               
+               }
+               
+               
+                           
+               /*로그인 페이지*/
+               #loginDiv {
+               padding:50px;
+              
+               }
+               
+               #loginId {
+               margin-left:39px;
+              
+               }
+               
+               #loginPw{
+               margin-right:30px;
+               }
+               
+               /*회원가입 박스*/
+               .transparent-section {
+                   border: 3px;
+                   border-radius: 10px; 
+                   border-style:solid;
+                   border-color: #002936;
+                   box-shadow:  5px 5px 17px rgba(0, 0, 0, 0.8);
+                   background:rgba(241, 241, 241, 0.8);
+                   position: absolute;	
+                   top: 120%;
+                   left: 32%;
+                   width: 35%;
+                   height: 180%
+               }
+
+               .registerinputstyle label {
+                font-size: 14px;
+                font-weight: bold;
+                text-align: right;
+                color: #3b3535;
+                display: inline-block;
+                position: relative;
+                width: 200px;
+                height: 40px;
+               }
+
+               .inputstyle {
+                width: 250px;
+                height: 30px;
+               }
+
+               .addressinputstyle {
+                position: relative;
+                bottom: 10px;
+                width: 250px;
+                height: 30px;
+                left: 206px;
+               }
+               
+               .buttonstyle {
+                font-weight: bold;
+                color: #3b3535;
+                width: 90px;
+                height: 30px;
+                font-weight: bold;
+               }
+
+               /*회원가입 버튼*/
+               .joinbutton {
+                width: 120px;
+                height: 40px;
+                position: relative;
+                left: 283px;
+                top: 20px;
+                font-weight: bold;
+                color: #3b3535;
+               }
+               /*회원가입 글씨*/
+               h1 {
+                position: relative;
+                left: 38%;
+                color: #3b3535;
+                font-size: 40px;
+                }
+
+               #d0 {
+                position: relative;
+                top: 15px;
+               }
+               
+               #d1 {
+                position: relative;
+                top: 15px;
+               }
+               
+               #d2 {
+                
+               }
+               
+                  #d3 {
+                
+                  }
+                  
+                  #d4 {
+                    
+                  }
+                  
+                  #d5 {
+                     
+                  }
+                  
+                  #d6 {
+                   
+                  }
+                  
+                  #ADDRESS {
+                    
+                  }
+                  
+
+                  #hDiv {
+                
+                  }
+
+              /* .registerinputstyle input {
+                width: 255px;
+                height: 28px;
+                margin-top: 5px;
+                border-color: #d6d6d6;
+                border-radius: 2px;
+                border-width: 1px;
+                }*/
+
+               /*회원가입 박스
+                .transparent-section {
+               background-color: rgba(236, 235, 235, 0.3);
+               border: 2px solid rgb(234, 247, 255);
+               border-radius: 10px;
+               box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+               width: 600px;
+               height: 600px;
+               position: relative;
+               left: 50%;
+               top: 120%;
+               transform: translate(-50%, -50%);
+                } */
+              
+               
+               #createButton {
+               border:none;
+               border-radius:5px;
+               padding:10px;
+               margin-top:20px;
+               margin-left:30px;
+               background:linear-gradient(45deg,#cbccff,#00a3ff);
+               color:#4e1a03;
+               cursor:pointer;
+               }
+               
+               #loginButton {
+                border:none;
+               border-radius:5px;
+               padding:10px;
+               margin-left:40px;
+               background:linear-gradient(45deg,#cbccff,#00a3ff);
+               color:#4e1a03;
+               cursor:pointer;
+               }
+               
+               
+               
+               label {
+               color:white;
+               }
+              
+               
+               
+               
+               #loginBody {
+                background-image: url('../img/zip.jpg');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                height:100vh;
+               }
+               
+               /*회원가입 페이지*/
+               #createBody {
+                    background-image: url('../img/city2.png');
+                    background-size: 102%;
+               }
+
+               
+               #checkButton{
+                   border:none;
+                   border-radius:5px;
+                   margin-left:15px;
+                   margin-left:15px;
+                   font-size : 13px;
+                   background:linear-gradient(45deg,violet,orange);
+                   cursor:pointer;
+               }
+               
+               #checkPwButton {
+                   border:none;
+                   border-radius:5px;
+                   margin-left:15px;
+                   font-size: 12px;
+                   margin-right : 20px;
+                   background:linear-gradient(45deg,violet,orange);
+                   cursor:pointer;
+               }
+               
+               #createIdButton{
+                   padding:5px;
+                   border:none;
+                   border-radius:5px;
+                   background:linear-gradient(45deg,violet,orange);
+                   cursor:pointer;
+               }
+               
+               #createIdButton:hover {
+                   background: linear-gradient(45deg,violet,pink);
+                   color:#4e1a03;
+                   box-shadow : 5px 5px 3px rgba(1, 1, 2, 0.5);
+                  }	
+               
+                
+                /*회원가입 입력창 스타일
+                .registerinputstyle input {
+                position: relative;
+                left: 100px;
+                top: 100px;
+                width: 250px;
+                height: 28px;
+                margin-top: 5px;
+                border-color: #d6d6d6;
+                border-radius: 2px;
+                border-width: 1px;
+                display: inline-block;
+                } 
+                */
+                
+               
+               
+                  
+               
+               /*메인 페이지*/
+               
+               #mainBody {
+               background-image: url('../img/build.jpg');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    height:100vh;
+               
+               }
+               
+               #mainDiv {
+                  background: beige;
+                  
+               
+               }
+               
+               #mainDiv{
+               background-color: rgba(89, 86, 86, 0.7);
+               }
+               
+               #hh {
+               margin-left : 700px;
+               text-align:center;
+               color:black;
+               width:500px;
+               background:white;
+               }
+               
+               #imageSize{
+               width:200px;
+               height:300px;
+               }
+               
+               
+               
+               
+               
+               /*회원탈퇴*/
+               #deleteBody {
+                    background-image: url('../img/delete.png');
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    height:100vh;
+               }
+               
+               #deleteId {
+               margin-left:46px;
+               margin-right:50px;
+               }
+            
+                #deletePw {
+                margin-left:30px;
+                margin-right:50px;
+                }
+                
+                #deleteButton {
+                border:none;
+                border-radius:5px;
+                padding:10px;
+                margin-left :130px;
+               margin-bottom : 20px;
+               background:linear-gradient(45deg,orange,red);
+               color:white;
+               cursor:pointer;
+               
+                }
+                
+                #deleteButton:hover {
+                background: white;
+               color:red;
+               box-shadow : 5px 5px 3px rgba(1, 1, 2, 0.5);
+                }
+                  
+                  h2 {
+                  color:white;
+                  
+                  }
+                  
+                  a {
+                  color:white;
+            
+                  }
+                  
+                  
+                  p {
+                  color:white;
+                  }
+                  
+                  .use a {
+                font-weight: bold;  
+                text-decoration: none;
+                color:#0f0f0f
+                }
+              

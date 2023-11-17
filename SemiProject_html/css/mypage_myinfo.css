@@ -1,6 +1,7 @@
 @charset "EUC-KR";
             *{box-sizing: border-box;}
 
+            
             header {
             height: 190px;
             background: linear-gradient(to right, #6190E8, #A7BFE8);       
@@ -27,7 +28,7 @@
                 text-align: center;
                 font-size: 13px;
             }
-
+            
             .use p {
                 position: relative;
                 left: 10px;
